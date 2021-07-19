@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import QuizQuestionButton from "./QuizQuestionButton";
 //let quizData = require("./quiz_data.json");
 
 class QuizQuestion extends Component {
@@ -16,7 +16,9 @@ class QuizQuestion extends Component {
         </section>
         <section className="buttons">
           <ul>
-            <li>{this.props.quiz_question.answer_options[0]}</li>
+            <QuizQuestionButton
+              button_text={this.props.quiz_question.answer_options[0]}
+            />
           </ul>
         </section>
       </main>
